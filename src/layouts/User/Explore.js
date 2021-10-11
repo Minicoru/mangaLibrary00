@@ -109,8 +109,8 @@ function Admin(props) {
             <Sidebar
               routes={routes}
               logo={{
-                outterLink: "https://www.creative-tim.com/",
-                text: "Creative Tim",
+                // outterLink: "https://www.creative-tim.com/",
+                text: "MyLibrary",
                 imgSrc: logo,
               }}
               toggleSidebar={toggleSidebar}
@@ -123,7 +123,7 @@ function Admin(props) {
               />
               <Switch>
                 {getRoutes(routes)}
-                <Redirect from="*" to="/User/Explore" />
+                {/* <Redirect from="*" to="/User/Explore" /> */}
               </Switch>
               {
                 // we don't want the Footer to be rendered on map page

@@ -51,7 +51,7 @@ import {
   chartExample4,
 } from "variables/charts.js";
 
-function Dashboard(props) {
+function MyLibrary(props) {
   const [bigChartData, setbigChartData] = React.useState("data1");
   const setBgChartData = (name) => {
     setbigChartData(name);
@@ -66,7 +66,7 @@ function Dashboard(props) {
                 <Row>
                   <Col className="text-left" sm="12">
                     {/* <h5 className="card-category">Total Shipments</h5> */}
-                    <CardTitle tag="h2">Explore</CardTitle>
+                    <CardTitle tag="h2"></CardTitle>
                   </Col>
                   {/* <Col sm="6">
                     <ButtonGroup
@@ -533,4 +533,4 @@ function Dashboard(props) {
   );
 }
 
-export default Dashboard;
+export default MyLibrary;

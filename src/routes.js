@@ -29,26 +29,26 @@ import UserProfile from "views/UserProfile.js";
 
 var routes = [
   {
-    path: "/Explore",
+    path: "/User/Explore",
     name: "Explore",
     rtlName: "Explore",
-    icon: "tim-icons icon-chart-pie-36",
+    icon: "tim-icons icon-wifi",
     component: Explore,
     layout: "/User/Explore",
   },
   {
-    path: "/MyLibrary",
+    path: "/User/MyLibrary",
     name: "My Library",
     rtlName: "My Library",
-    icon: "tim-icons icon-chart-pie-36",
+    icon: "tim-icons icon-book-bookmark",
     component: MyLibrary,
     layout: "/User/MyLibrary",
   },
   {
-    path: "/Sources",
+    path: "/User/Sources",
     name: "Sources",
     rtlName: "Sources",
-    icon: "tim-icons icon-chart-pie-36",
+    icon: "tim-icons icon-world",
     component: Sources,
     layout: "/User/Sources",
   },
