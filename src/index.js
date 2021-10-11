@@ -33,20 +33,24 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import ThemeContextWrapper from './components/ThemeWrapper/ThemeWrapper';
 import BackgroundColorWrapper from './components/BackgroundColorWrapper/BackgroundColorWrapper';
 
+import UserProvider from './contexts/User';
+
 ReactDOM.render(
-	<ThemeContextWrapper>
-		<BackgroundColorWrapper>
-			<BrowserRouter>
-				<Switch>
-					<Route path='/User/Explore' render={(props) => <ExploreLayout {...props} />} />
-					<Route path='/User/Sources' render={(props) => <SourcesLayout {...props} />} />
-					<Route path='/User/MyLibrary' render={(props) => <MyLibraryLayout {...props} />} />
-					{/* <Route path='/admin' render={(props) => <AdminLayout {...props} />} />
+	<UserProvider>
+		<ThemeContextWrapper>
+			<BackgroundColorWrapper>
+				<BrowserRouter>
+					<Switch>
+						<Route path='/User/Explore' render={(props) => <ExploreLayout {...props} />} />
+						<Route path='/User/Sources' render={(props) => <SourcesLayout {...props} />} />
+						<Route path='/User/MyLibrary' render={(props) => <MyLibraryLayout {...props} />} />
+						{/* <Route path='/admin' render={(props) => <AdminLayout {...props} />} />
 					<Route path='/rtl' render={(props) => <RTLLayout {...props} />} /> */}
-					<Redirect from='/' to='/User/Explore' />
-				</Switch>
-			</BrowserRouter>
-		</BackgroundColorWrapper>
-	</ThemeContextWrapper>,
+						<Redirect from='/' to='/User/Explore' />
+					</Switch>
+				</BrowserRouter>
+			</BackgroundColorWrapper>
+		</ThemeContextWrapper>
+	</UserProvider>,
 	document.getElementById('root')
 );

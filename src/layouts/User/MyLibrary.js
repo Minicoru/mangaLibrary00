@@ -21,7 +21,7 @@ import { Route, Switch, Redirect, useLocation } from "react-router-dom";
 import PerfectScrollbar from "perfect-scrollbar";
 
 // core components
-import AdminNavbar from "components/Navbars/AdminNavbar.js";
+import UserNavbar from "components/Navbars/UserNavbar.js";
 import Footer from "components/Footer/Footer.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
 import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
@@ -33,7 +33,7 @@ import { BackgroundColorContext } from "contexts/BackgroundColorContext";
 
 var ps;
 
-function Admin(props) {
+function MyLibrary(props) {
   const location = useLocation();
   const mainPanelRef = React.useRef(null);
   const [sidebarOpened, setsidebarOpened] = React.useState(
@@ -116,14 +116,14 @@ function Admin(props) {
               toggleSidebar={toggleSidebar}
             />
             <div className="main-panel" ref={mainPanelRef} data={color}>
-              <AdminNavbar
+              <UserNavbar
                 brandText={getBrandText(location.pathname)}
                 toggleSidebar={toggleSidebar}
                 sidebarOpened={sidebarOpened}
               />
               <Switch>
                 {getRoutes(routes)}
-                {/* <Redirect from="*" to="/User/MyLibrary" /> */}
+                {/* <Redirect from="*" to="/User/Explore" /> */}
               </Switch>
               {
                 // we don't want the Footer to be rendered on map page
@@ -138,4 +138,4 @@ function Admin(props) {
   );
 }
 
-export default Admin;
+export default MyLibrary;

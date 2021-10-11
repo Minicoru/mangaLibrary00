@@ -33,7 +33,7 @@ import { BackgroundColorContext } from "contexts/BackgroundColorContext";
 
 var ps;
 
-function Explore(props) {
+function Profile(props) {
   const location = useLocation();
   const mainPanelRef = React.useRef(null);
   const [sidebarOpened, setsidebarOpened] = React.useState(
@@ -138,4 +138,4 @@ function Explore(props) {
   );
 }
 
-export default Explore;
+export default Profile;
